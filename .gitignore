@@ -3,8 +3,9 @@
 .settings/
 .classpath 
 .project
-.metadata
+.metadata/
 target/
+RemotSytemTempFiles/
 
 com.fourSided/.settings/
 com.fourSided/.classpath 

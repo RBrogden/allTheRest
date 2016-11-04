@@ -2,12 +2,12 @@ package com.fourSided.Shape;
 
 public class Line {
 	Point p1; 
-	Point p2;  
-	double length;
-	double slope; 
+	Point p2;	
 	
-	
-	Line(Point point1, Point point2){
+	public Line(Point point1, Point point2){
+		
+		p1 = point1;
+		p2 = point2;
 		
 	}
 
@@ -36,19 +36,15 @@ public class Line {
 	}
 	
 	public double getLength(){
-		
-		length = p1.distanceTo(p2);
-		
-		return length; 
+				
+		return p1.distanceTo(p2);
 		
 	}
 	
 	
 	public double getSlope(Point p1, Point p2){
-		
-		
-		
-		return slope;
+				
+		return (p1.getY()-p2.getY()) / (p1.getX() - p2.getX());
 		
 		
 	}

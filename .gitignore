@@ -3,7 +3,7 @@
 .settings/
 .classpath 
 .project
-.metadata/
+.metadata
 target/
 RemotSytemTempFiles/
 
@@ -11,6 +11,7 @@ com.fourSided/.settings/
 com.fourSided/.classpath 
 com.fourSided/.project
 com.fourSided/target/
+com.fourSided/.metadata/
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/

@@ -4,11 +4,9 @@ public class Line {
 	Point p1; 
 	Point p2;	
 	
-	public Line(Point point1, Point point2){
-		
+	public Line(Point point1, Point point2){		
 		p1 = point1;
-		p2 = point2;
-		
+		p2 = point2;		
 	}
 
 

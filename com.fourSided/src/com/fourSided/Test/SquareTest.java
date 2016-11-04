@@ -16,24 +16,22 @@ public class SquareTest {
 	Point p4 = new Point(2, 0);
 	
 	Point p5 = new Point(10, 15);
-	
-	Square square = new Square(p1, p2, p3, p4);
-	Square notSquare = new Square(p1, p2, p3, p5);
-	
+		
 	@Test
 	public void testIsSquare() {
-		try {
-			assertTrue(square.isSquare());
-		} catch (ShapeException e) {
-			e.printStackTrace();
-		}
 		
+		Square square;
 		try {
-			assertTrue(square.isSquare());
-		} catch (ShapeException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+			square = new Square(p1, p2, p3, p4);
+			assertTrue(square.isSquare(square));
+		} catch (ShapeException e1) {
+			e1.printStackTrace();
+		}	
+	}
+	
+	@Test(expected = ShapeException.class)
+	public void testIsSquareException() throws ShapeException {
+		Square notSquare = new Square(p1, p2, p3, p5);		
 	}
 
 }

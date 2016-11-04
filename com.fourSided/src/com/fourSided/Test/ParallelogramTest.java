@@ -17,27 +17,33 @@ public class ParallelogramTest {
 	
 	Point p5 = new Point(10, 3);
 	
-	Parallelogram parallelogram = new Parallelogram(p1, p2, p3, p4);
-	Parallelogram notParallelogram = new Parallelogram(p1, p2, p3, p5);
 	
 	
 	@Test
 	public void testGetArea() {
-		assertEquals(parallelogram.getArea(), 8, 0);
+		Parallelogram parallelogram;
+		try {
+			parallelogram = new Parallelogram(p1, p2, p3, p4);
+			assertEquals(parallelogram.getArea(), 8, 0);
+		} catch (ShapeException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
 	}
 
 	@Test
 	public void testIsParallelogram() {
 		try {
-			assertTrue(parallelogram.isParallelogram());
+			Parallelogram parallelogram = new Parallelogram(p1, p2, p3, p4);
+			assertTrue(parallelogram.isParallelogram(parallelogram));
 		} catch (ShapeException e) {
 			e.printStackTrace();
 		}
-		try {
-			assertTrue(notParallelogram.isParallelogram());
-		} catch (ShapeException e) {
-			e.printStackTrace();
-		}
+	}
+	
+	@Test(expected = ShapeException.class)
+	public void testIsParallelogramException() throws ShapeException {
+		Parallelogram notParallelogram = new Parallelogram(p1, p2, p3, p5);		
 	}
 
 }

@@ -1,14 +1,15 @@
 package com.fourSided.Shape;
 
-public class Parallelogram extends Quadrilateral{
+public class Parallelogram extends Trapezium{
 
 
-	public Parallelogram(Point one, Point two, Point three, Point four)
+	public Parallelogram(Point one, Point two, Point three, Point four) throws ShapeException
 	{
-		super(one, two, three, four);		
+		super(one, two, three, four);	
+		isParallelogram(this);
 	}
 
-	public boolean isParallelogram() throws ShapeException
+	public boolean isParallelogram(Parallelogram parallelogram) throws ShapeException
 	{
 		Line line1 = getSide1();
 		Line line2 = getSide2();

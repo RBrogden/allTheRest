@@ -3,12 +3,13 @@
 .settings/
 .classpath 
 .project
+.metadata
 target/
 
-Quay-Gnomes/.settings/
-Quay-Gnomes/.classpath 
-Quay-Gnomes/.project
-Quay-Gnomes/target/
+com.fourSided/.settings/
+com.fourSided/.classpath 
+com.fourSided/.project
+com.fourSided/target/
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/

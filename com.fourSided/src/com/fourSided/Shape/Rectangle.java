@@ -24,9 +24,9 @@ public class Rectangle extends Parallelogram{
 	}
 	
 	
-	public double GetArea(Quadrilateral q) {
-		Line line1=q.getSide1();
-		Line line2=q.getSide2();
+	public double GetArea() {
+		Line line1=getSide1();
+		Line line2=getSide2();
 		double length=line1.getLength();
 		double width=line2.getLength();
 		double area=length*width;

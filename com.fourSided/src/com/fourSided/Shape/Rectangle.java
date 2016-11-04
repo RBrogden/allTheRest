@@ -3,13 +3,6 @@ package com.fourSided.Shape;
 public class Rectangle extends Parallelogram{
 
 	public Rectangle(Point point1, Point point2, Point point3,Point point4) throws ShapeException {
-//			if(isRectangle( point1, point2, point3, point4)){
-//				return;
-//			}
-//			else{
-//				throw new ShapeException(null, point1, point2, point3, point4);
-//			}
-		
 		super(point1, point2, point3, point4);
 		Rectangle.isRectangle(this);
 	}
@@ -31,9 +24,9 @@ public class Rectangle extends Parallelogram{
 	}
 	
 	
-	public double GetArea(Quadrilateral q) {
-		Line line1=q.getSide1();
-		Line line2=q.getSide2();
+	public double GetArea() {
+		Line line1=getSide1();
+		Line line2=getSide2();
 		double length=line1.getLength();
 		double width=line2.getLength();
 		double area=length*width;

@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import com.fourSided.Shape.Parallelogram;
 import com.fourSided.Shape.Point;
+import com.fourSided.Shape.ShapeException;
 
 public class ParallelogramTest {
 
@@ -27,8 +28,16 @@ public class ParallelogramTest {
 
 	@Test
 	public void testIsParallelogram() {
-		assertTrue(parallelogram.isParallelogram());
-		assertFalse(notParallelogram.isParallelogram());
+		try {
+			assertTrue(parallelogram.isParallelogram());
+		} catch (ShapeException e) {
+			e.printStackTrace();
+		}
+		try {
+			assertTrue(notParallelogram.isParallelogram());
+		} catch (ShapeException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

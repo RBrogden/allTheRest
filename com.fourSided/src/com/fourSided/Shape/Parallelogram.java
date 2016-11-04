@@ -5,14 +5,10 @@ public class Parallelogram extends Quadrilateral{
 
 	public Parallelogram(Point one, Point two, Point three, Point four)
 	{
-		super(one, two, three, four);
-		if (!isParallelogram())
-		{
-			//throw shapeException;
-		}
+		super(one, two, three, four);		
 	}
 
-	public boolean isParallelogram()
+	public boolean isParallelogram() throws ShapeException
 	{
 		Line line1 = getSide1();
 		Line line2 = getSide2();
@@ -25,7 +21,7 @@ public class Parallelogram extends Quadrilateral{
 		}
 		else
 		{
-			return false;
+			throw new ShapeException(new Parallelogram(getPoint1(), getPoint2(), getPoint3(), getPoint4()), getPoint1(), getPoint2(), getPoint3(), getPoint4());
 		}
 	}		
 

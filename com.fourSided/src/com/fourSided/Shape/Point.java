@@ -1,5 +1,7 @@
 package com.fourSided.Shape;
 
+import java.text.DecimalFormat;
+
 public class Point {
 	private double x;
 	private double y;
@@ -38,12 +40,21 @@ public class Point {
 	}
 	
 	public double distanceTo(Point point){
-		return 0;
+		double newX=point.getX();
+		double newY=point.getY();
+		double diffrenceX=newX-x;
+		double diffrenceY=newY-y;
+		double distance=Math.sqrt((diffrenceX*diffrenceX)+(diffrenceY*diffrenceY));
+		return distance;
 	
 	}
 	
 	public String toString(){
-		return null;
+		DecimalFormat df= new DecimalFormat("0.00");
+		String stringX=df.format(x);
+		String stringY=df.format(y);
+		String result=("X:"+stringX+", Y:"+stringY);
+		return result;
 	}
 	
 	

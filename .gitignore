@@ -5,7 +5,7 @@
 .project
 .metadata
 target/
-RemotSytemTempFiles/
+RemotSytemTempFiles
 
 com.fourSided/.settings/
 com.fourSided/.classpath 

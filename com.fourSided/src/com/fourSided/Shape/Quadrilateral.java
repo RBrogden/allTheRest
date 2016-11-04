@@ -61,11 +61,11 @@ public abstract class Quadrilateral {
 	{
 		return "Information about this shape; \n"
 				+ "Co-ordinates: "
-				+ point1.toString() + " " + point2.toString() + " " + point3.toString() + " " + point4.toString() "\n"
+				+ point1.toString() + " " + point2.toString() + " " + point3.toString() + " " + point4.toString() + "\n"
 				+ "Line lengths: " 
-				+ side1.getLength() + " " + side2.getLength() + " " + side3.getLength() + " " +  side4.getLength() "\n"
+				+ side1.getLength() + " " + side2.getLength() + " " + side3.getLength() + " " +  side4.getLength() + "\n"
 				+ "Perimeter of shape: "
-				+ getPerimeter() "\n"
+				+ getPerimeter() + "\n"
 				+ "The area of the shape: " 
 				+ getArea();
 		
